@@ -2,7 +2,7 @@ package com.wxwcase.collections_pattern.iterator_builtin;
 
 import java.util.Iterator;
 
-public class DinerMenu implements Menu {
+public class DinerMenu implements Iterable<String> {
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
 	String[] menuItems;
@@ -32,7 +32,11 @@ public class DinerMenu implements Menu {
 		return menuItems;
 	}
   
-	public Iterator<String> createIterator() {
+//	public Iterator<String> createIterator() {
+//		return new DinerMenuIterator(menuItems);
+//	}
+
+	public Iterator<String> iterator() {
 		return new DinerMenuIterator(menuItems);
 	}
  

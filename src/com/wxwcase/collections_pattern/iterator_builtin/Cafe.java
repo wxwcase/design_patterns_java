@@ -9,8 +9,8 @@ public class Cafe {
 		DinerMenu dinerMenu = new DinerMenu();
 		
 		// with iterators
-		Iterator<String> pancakeIterator = pancakeHouseMenu.createIterator();
-		Iterator<String>  dinerIterator = dinerMenu.createIterator();
+		Iterator<String> pancakeIterator = pancakeHouseMenu.iterator();
+		Iterator<String>  dinerIterator = dinerMenu.iterator();
 
 		System.out.println("\nMENU (with iterators)\n----\nBREAKFAST");
 		printMenu(pancakeIterator);

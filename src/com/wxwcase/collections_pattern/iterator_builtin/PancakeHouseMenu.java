@@ -3,7 +3,7 @@ package com.wxwcase.collections_pattern.iterator_builtin;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class PancakeHouseMenu implements Menu {
+public class PancakeHouseMenu implements Iterable<String> {
 	ArrayList<String> menuItems;
  
 	public PancakeHouseMenu() {
@@ -24,7 +24,11 @@ public class PancakeHouseMenu implements Menu {
 		return menuItems;
 	}
   
-	public Iterator<String> createIterator() {
+//	public Iterator<String> createIterator() {
+//		return menuItems.iterator();
+//	}
+
+	public Iterator<String> iterator() {
 		return menuItems.iterator();
 	}
   
